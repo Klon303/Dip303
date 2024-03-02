@@ -1,0 +1,16 @@
+@font-face {
+	font-family: "Gunterz";
+	src:	url("../fonts/Gunterz Medium/Gunterz-Medium.otf") format("opentype"); /* Open Type Font */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src:	url("../fonts/GothamPro-Medium.woff") format("opentype"); /* Open Type Font */
+	src:	url("../fonts/GothamProNarrow-Medium.woff2") format("opentype"); /* Open Type Font */
+	src:	url("../fonts/GothamProNarrow-Bold.ttf") format("opentype"); /* Open Type Font */
+
+	font-weight: normal;
+	font-style: normal;
+}
