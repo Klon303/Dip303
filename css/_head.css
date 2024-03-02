@@ -276,9 +276,6 @@ gap: 100px;
 }
 }
 
-.backgraund-zap{
-  background-image: url(/img/zap-fone.png) 
-}
 
 .zap{
   display: flex;
