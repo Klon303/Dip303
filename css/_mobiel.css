@@ -48,13 +48,13 @@ max-width: 250px;
 width: 100%;
 }
 .card_1 {
-    background: url(/img/check_12.png) 0% 0% / 100% 920px no-repeat;
+    background: url(/img/check_2.png) 0% 0% / 100% 920px no-repeat;
 }
 .card_2 {
-    background: url(/img/check_12.png) 0% 0% / 100% 920px no-repeat;
+    background: url(/img/check_1.png) 0% 0% / 100% 920px no-repeat;
 }
 .card_3 {
-    background: url(/img/check_12.png) 0% 0% / 100% 920px no-repeat;
+    background: url(/img/check3.png) 0% 0% / 100% 920px no-repeat;
 }
 .footer-wrapper {
     padding: 10px;
