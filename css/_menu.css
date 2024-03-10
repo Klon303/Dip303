@@ -337,10 +337,12 @@
   background-image:url(/img/back-slick.png);
   background-size:100% 300%;
  background-color:black;
+ padding-top: 100px;
+ padding-bottom: 100px;
 }
 .slogan{
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 42px;
   margin: 0 auto;
 }
 
