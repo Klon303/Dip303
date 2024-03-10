@@ -112,7 +112,7 @@
 }
 
 
-@media (max-width: 1400px){
+@media (max-width: 1250px){
     .background-price{
         background:no-repeat;
         background-image:url(/img/fone-price-mobile.png);

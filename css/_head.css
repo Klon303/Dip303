@@ -131,7 +131,7 @@ p span {
     }
   }
 
-@media (max-width: 1500px){
+@media (max-width: 1100px){
     .head {
 flex-direction: column;
 gap: 100px;
