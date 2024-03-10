@@ -5,7 +5,7 @@
 }
 
 .uslugi-price{
-    padding-top: 100px;
+    padding-top: 75px;
     height: 100%;
     width: 100%;
 }
@@ -13,6 +13,7 @@
 .price-main{
     color:black;
     margin-bottom: 0px;
+    font-size: 32px;
     
 }
 .price-wrapper{

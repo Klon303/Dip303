@@ -1,6 +1,6 @@
 .video-ifame{
     width: 650px;
-    height: 300px;
+    height: 350px;
 }
 
 @media (max-width: 900px){
@@ -26,7 +26,12 @@
 }
 .slider-card{
     padding-top: 50px;
+    padding-bottom: 0px;
 }
+.video{
+    margin-bottom: 30px;
+}
+
 .card-wrapper{
     padding:10px;
     text-align: center;
@@ -37,7 +42,7 @@
 
 .button-zapp {
     font-size:26px;
-    padding:15px 30px
+    padding:15px 30px;
 }
 
 .zap-button-black {
@@ -77,11 +82,11 @@ line-height: 20px;
 
 .sertification{
     padding-bottom: 30px;
+    padding-top: 50px;
 }
 .sertification-main {
 width: 100%;
 text-align: center;
-font-size: 30px;
 }
 .card_1 {
     background: url(/img/check_2.png) 0% 0% / 100% 920px no-repeat;
