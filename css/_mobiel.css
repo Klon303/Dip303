@@ -1,5 +1,5 @@
 .video-ifame{
-    width: 625px;
+    width: 650px;
     height: 300px;
 }
 
@@ -9,10 +9,23 @@
     padding-right: 10px;
 }
 .main-text{
-    font-size: 36px;
+    font-size: 40px;
     line-height: 50px;
-    width: auto;
-    width: 330px;
+    width: 370px;
+}
+.slogan{
+    padding-top: 12px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 30px;
+    width: 370px;
+}
+.info{
+    padding-left: 0px;
+    background-size:95% 95% contain;
+}
+.slider-card{
+    padding-top: 50px;
 }
 .card-wrapper{
     padding:30px;
@@ -21,12 +34,13 @@
     height: 450px;
 }
 
-.slogan{
-    font-size: 28px;
-}
 .button-zapp {
-    font-size:20px;
+    font-size:26px;
+    padding:15px 30px
 }
+
+.zap-button-black {
+font-size: 15px;}
 
 
 .video-ifame{
@@ -36,6 +50,10 @@
 .slider{
     max-width: 300px;
     height: 450px;
+}
+.slider__item{
+    width: 300px;
+
 }
 
 .price-card{
@@ -47,12 +65,22 @@
 .usluga{
 font-size: 15px;
 max-width: 220px;
+line-height: 20px;
 }
 .price{
     font-size:15px;
 }
+.dop-price{
+    padding-top: 20px;
+}
+
+.sertification{
+    padding-bottom: 30px;
+}
 .sertification-main {
 width: 100%;
+text-align: center;
+font-size: 30px;
 }
 .card_1 {
     background: url(/img/check_2.png) 0% 0% / 100% 920px no-repeat;

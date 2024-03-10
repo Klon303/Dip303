@@ -4,8 +4,7 @@
   top: 0;
   left: 0;
   z-index: 50;
-  background-color: black;
-  opacity: 100%;
+  background-image: url(/img/Rectangle\ 147.png);
 }
 
 .header__logo {
@@ -34,7 +33,7 @@
 .header__body {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   height: 80px;
   align-items: center;
 }
@@ -48,6 +47,8 @@
   position: relative;
   z-index: 2;
   padding: 0;
+  margin: 0;
+  gap:70px;
 }
 
 .header__list li {
@@ -64,7 +65,6 @@
   font-family: Gotham;
   opacity: 60%;
   text-transform: capitalize;
-  color: white;
 }
 .header__link:hover{
   opacity: 100%;
@@ -98,7 +98,7 @@
   }
 
   .header__burger span {
-    background-color: #fff;
+    background-color: black;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -110,7 +110,7 @@
   .header__burger:before,
   .header__burger:after {
     content: '';
-    background-color: #fff;
+    background-color: black;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -148,8 +148,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;   
-    background-image: url(/img/fone.png);
-    background-color:black; 
+    background-image: url(/img/Rectangle\ 147.png);
     padding: 100px 10px 20px 10px;
     transition: all 0.3s ease 0s;
   }
@@ -170,7 +169,7 @@
     font-size: 36px;
   }
   .header__link:hover {
-    border: 3px solid white;
+    border: 3px solid black;
     padding: 10px;
   }
 }
@@ -185,7 +184,7 @@
   }
 }
 .name-slogan{
-  padding-top:160px;
+  padding-top:125px;
   text-align: center;
 }
 
@@ -196,17 +195,17 @@
   font-family: Gunterz;
   font-weight: bold;
   color: white;
-  font-size: 100px;
+  font-size: 90px;
   line-height: 140px;
   width: 800px;
-  border-bottom: 8px solid white;
+  border-bottom: 6px solid white;
 }
 
 .slogan {
   font-family: Gunterz;
   font-weight: 700;
   color: black;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 54px;
   color: white;
 }
@@ -215,38 +214,6 @@
   border-bottom:solid  6px;
 }
 
-.menu-button{
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.button-menu {
-  font-family: Anonymous Pro;
-  font-weight: 400;
-  color: black;
-  padding: 12px 18px;
-  border:solid 3px black;
-  border-radius:11px;
-  font-size: 24px;
-  line-height: 24px;
-  background-color:white;
-  transition: 1s;
-}
-
-.button-menu:hover {
-  background-color: rgba(252, 208, 1, 1)  ;
-}
-
-.button-menu:focus-visible {
-  border: orange solid;
-  background-color: rgba(252, 208, 1, 1)  ;
-}
-
-.button-menu:active {
-  border:solid 3px orange ;
-  background-color: rgba(252, 208, 1, 1)  ;
-}
 
 @media (max-width: 1500px){
   .list{
@@ -261,44 +228,6 @@
   .button{
     display: block;
   }
-.button {
-  position: relative;
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 5vh; 
-  right: 5vw; 
-  z-index: 2000;
-  box-shadow: 0 1rem 3rem black;
-  text-align: center; 
-  cursor: pointer;
-}
-
-.background {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 5.5vh; 
-  right: 5.5vw; 
-  background-image: radial-gradient(green, black);
-  z-index: 1000;
-
-  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: -60vw;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  transition: all 0.8s;
-}
 
 .list {
   position: absolute;
@@ -404,58 +333,20 @@
 }
 
 .name-slogan-back{
-  background-image:url(/img/fone.png);
-  background-color:black;
+  background:no-repeat;
+  background-image:url(/img/back-slick.png);
+  background-size:100% 300%;
+ background-color:black;
 }
 .slogan{
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-.main-slogan{
-  color: white;
-  text-align: center;
-  font-family: Anonymous Pro;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1150px){
   .Profi-main-text{
     font-size: 64px;
     width: 600px;
-  }
-}
-
-.stroka-back{
-  background: black;
-}
-
-.marquee-container{
-  display: flex;
-  overflow: hidden;
-}
-
-.marquee{
-  font-size: 20px;
-  line-height: 1.3;
-  font-family: sans-serif;
-  padding: 12px 0;
-  color: #fff;
-  white-space: nowrap;
-  animation: marquee 15.5s infinite linear;
-}
-
-.marquee:after{
-  content: "Работаем по предварительной записи 24/7!";
-}
-
-@keyframes marquee{
-  0% {
-      transform: translateX(-100%)
-  }
-  100% {
-      transform: translateX(500%)
   }
 }

@@ -1,7 +1,7 @@
 .background-price{
     background:no-repeat;
     background-image:url(/img/Fone-price.png);
-    background-size: 100% 100%;
+    background-size: 100% 105%;
 }
 
 .uslugi-price{
@@ -12,40 +12,38 @@
 
 .price-main{
     color:black;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     
 }
 .price-wrapper{
     display: flex;
-    gap:20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
 
 }
 .price-card{
-    width: 550px;
+    width: 440px;
     height: 950px;
     padding-top: 20px;
-    padding: 50px;
+    padding: 40px;
     padding-top: 200px;
 }
 
 .card_1{
     background:no-repeat;
     background-image: url(/img/check_2.png);
-    background-size: 550px 920px;}
+    background-size: 440px 920px;}
 
 .card_2{
     background:no-repeat;
     background-image: url(/img/check_1.png);
-    background-size: 550px 920px;
+    background-size: 440px 920px;
 }
 
 
 .card_3{
     background:no-repeat;
     background-image: url(/img/check3.png);
-    background-size: 550px 920px;
+    background-size: 440px 920px;
 }
 
 .price-cur{
@@ -66,7 +64,7 @@
     font-family: Arial, sans-serif; /* Гарнитура шрифта */
     font-size: 16px; /* Размер текста подсказки */
     padding: 20px 10px; /* Поля */
-    border: 1px solid #333; /* Параметры рамки */
+    border: 1px solid #333;
     border-radius: 11px;
     width: 60%;
 }
@@ -92,21 +90,33 @@
     font-family: Roboto;
     font-weight: 400;
     color: black;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 32px;
-    max-width: 300px;
+    max-width: 270px;
 }
 
 .price {
     font-family: Roboto;
     font-weight: 700;
     color: black;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 32px;
 }
 
+.dop-price{
+    padding-top: 40px;
+}
 
-@media (max-width: 1300px){
+.red{
+    color: red;
+}
+
+
+@media (max-width: 1400px){
+    .background-price{
+        background:no-repeat;
+        background-image:url(/img/fone-price-mobile.png);
+        background-size: 100% 103%;}
     .price-wrapper{
         display: flex;
         flex-direction: column;

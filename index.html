@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta meta name="viewport" content="width=device-width, initial-scale=1. user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Barbershop</title>
-    <link rel="stylesheet" href="..\css\style.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/days-sans-black" rel="stylesheet">
@@ -33,12 +34,6 @@
             </li>
             <li>
               <a href="#footer" class="header__link">Контакты</a>
-            </li>
-            <li>
-            </li>
-            <li>
-            </li>
-            <li>
             </li>
           </ul>
         </nav>
@@ -69,23 +64,15 @@
   <div class="container">
     <div id="main" class="name-slogan">
     <h1 class="main-text">DIP barbershop</h1>
-    <h3 class="slogan">доверься профи. попробуй стиль!</h3>    
+    <h3 class="slogan">доверься профи - попробуй стиль!</h3>    
       <div class="zap">
-        <div class="zap-button"><a href="https://b885266.yclients.com/company/825705/select-services?o=" class="button-zapp">Записаться онлайн</a></div>
-        <div class="zap-button"><a href="tel:+375(29)1212573" class="button-zapp">Записаться по телефону</a></div>
+        <div><a href="https://b885266.yclients.com/company/825705/select-services?o=" class="button-zapp">Записаться онлайн</a></div>
+        <div><a href="tel:+375(29)1212573" class="button-zapp zap-button-black">Записаться по телефону</a></div>
       </div>
     </div>
   </div>
 </div>
 </div>
-<!-- <div class="stroka-back">
-<div class="container">
-<div class="marquee-container">
-  <p class="marquee">
-  </p>
-  </div>
-</div>
-</div> -->
 </div>
 </div>
 <div class="backgraund">
@@ -120,38 +107,71 @@
   </div>
   <div class="slider-card">
     <div class="video"><iframe class="video-ifame" src="https://www.youtube.com/embed/q-lhvW4BYq4?si=lt9c3QM6U3O6oQ85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-    <div class="center">
-      <div class="slider" data-pos="0">
-          <div class="slider__slides">
-          <div class="slider__slide"></div>
-          <div class="slider__slide"></div>
-          <div class="slider__slide"></div>
-          <div class="slider__slide"></div>
-          <div class="slider__slide"></div>
-          <div class="slider__slide"></div>
-        </div>
-        <div class="slider__dots">
-          <a href="#" onclick="return false" class="slider__indicator"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="0"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="1"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="2"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="3"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="4"></a>
-          <a href="#" onclick="return false" class="slider__dot" data-pos="5"></a>
-        </div>
-      </div>
-    </div>
+    <div class="slider">
+      <a href="" class="slider__control slider__control--prev"><img src="/img/prev — копия.png" alt=""></a>
+      <ul class="slider__list">
+        <li class="slider__item slider__item--active"></li>
+        <li class="slider__item"></li>
+        <li class="slider__item"></li>
+        <li class="slider__item"></li>
+        <li class="slider__item"></li>
+      </ul>
+      <a href="" class="slider__control slider__control--next"><img src="/img/Next.png" alt=""></a>
     </div>
   </div>
 </div>
 </div>
-</div>
-  </div>
+<script>
+var leftArrow = document.querySelector('.slider__control--prev');
+var rightArrow = document.querySelector('.slider__control--next');
+var sliderList = document.querySelector('.slider__list');
+var sliderContainer = document.querySelector('.slider');
+var size = parseInt(getComputedStyle(sliderContainer).width);
+var start = 1;
+
+leftArrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+ 
+    if (start > 1 && currentLeft % size == 0) {        
+      sliderList.style.left = currentLeft + size + 'px';
+      start--;      
+      
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = currentLeft - 4 * size + 'px';
+      start = 5;      
+    }
+ })
+
+rightArrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+
+    if (start < 5 && currentLeft % size == 0) {
+
+        sliderList.style.left = currentLeft - size + 'px';
+        start++;
+    
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = 0 + 'px';
+      start = 1;     
+    }
+})
+
+
+window.addEventListener('resize', function() {  
+  size = parseInt(getComputedStyle(sliderContainer).width); 
+  // console.log("size: " + size);
+  // console.log("start: " + start);
+  // console.log(-size * start);
+  sliderList.style.left = -size * (start-1) + 'px';
+});
+</script>
+<h2 class="head-main price-main" >--НАШИ УСЛУГИ--</h2>
 </div>
 <div class="background-price">
 <div class="container">
   <div class="uslugi-price" id="uslugi-price">
-    <h2 class="head-main price-main" >--НАШИ УСЛУГИ--</h2>
   <div class="price-wrapper">
     <div class="price-card card_1">
       <div class="border">
@@ -159,10 +179,10 @@
        <br> услуги</h3>
       </div>
       <div class="wrapper-cur">
-       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961721" class="price-cur" data-title="Выполняется шаветом  «До блеска» после распаривания"><p class="usluga">Бритьё головы</p> <p class="price">25 BYN * </p></a>
-       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961723" class="price-cur" data-title="Выполняется шаветом  «До блеска» после распаривания"><p class="usluga">Бритьё бороды</p> <p class="price">25 BYN *</p></a>
-       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961726" class="price-cur" data-title="Выполняется ножницами + машинкой переход с нуля или насадки"><p class="usluga">Стрижка головы</p> <p class="price">30 BYN *</p></a>
-       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961733" class="price-cur" data-title="Выполняется машинкой, ножницами+бритье шаветом с распариванием" ><p class="usluga ">Коррекция бороды и усов</p> <p class="price">30 BYN * </p></a>
+       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961721" class="price-cur" data-title="Выполняется шаветом  «До блеска» после распаривания"><p class="usluga">Бритьё головы</p> <p class="price">25 BYN  </p></a>
+       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961723" class="price-cur" data-title="Выполняется шаветом  «До блеска» после распаривания"><p class="usluga">Бритьё бороды</p> <p class="price">25 BYN </p></a>
+       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961726" class="price-cur" data-title="Выполняется ножницами + машинкой переход с нуля или насадки"><p class="usluga">Стрижка головы</p> <p class="price">30 BYN </p></a>
+       <a href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961733" class="price-cur" data-title="Выполняется машинкой, ножницами+бритье шаветом с распариванием" ><p class="usluga ">Коррекция бороды и усов</p> <p class="price">30 BYN  </p></a>
       </div>
       </div>
     <div class="price-card card_2">
@@ -175,17 +195,21 @@
     <div class="price-card card_3">
       <h3 class="uslugi">Дополнительные <br> услуги</h3>
       <div class="wrapper-cur">
-       <a  class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961743" data-title="Мытье головы и укладка профессиональной косметикой"><p class="usluga">Укладка*</p> <p class="price">10 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s14514373" data-title="Минимизирует отечность а также осветляет темные круги под глазами"><p class="usluga">Патчи*</p> <p class="price">15 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s14514385" data-title="Чистит поры кожи, устраняет черные точки, удаляет омертвевшую кожу"><p class="usluga">Черная маска</p> <p class="price">25 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961752" data-title="Выполняется массажером для профилактики облысения и головных болей"><p class="usluga">Массаж головы*</p> <p class="price">15 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961774" data-title="Способ временного окрашивания волос бороды"><p class="usluga">Камуфляж (тонирование) головы <p class="price">25 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961774" data-title="Способ временного окрашивания волос бороды"><p class="usluga">Камуфляж (тонирование) бороды</p> <p class="price">15 BYN *</p></a>
-       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961779" data-title="Способ временного удаления не желательного роста волос"><p class="usluga"> Восковая депиляция*</p> <p class="price">20 BYN *</p></a>
+       <a  class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961743" data-title="Мытье головы и укладка профессиональной косметикой"><p class="usluga"><strong class="red">*</strong>Укладка</p> <p class="price">10 BYN </p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s14514373" data-title="Минимизирует отечность а также осветляет темные круги под глазами"><p class="usluga"><strong class="red">*</strong>Патчи</p> <p class="price">15 BYN </p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s14514385" data-title="Чистит поры кожи, устраняет черные точки, удаляет омертвевшую кожу"><p class="usluga">Черная маска</p> <p class="price">25 BYN </p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961752" data-title="Выполняется массажером для профилактики облысения и головных болей"><p class="usluga"><strong class="red">*</strong>Массаж головы</p> <p class="price">15 BYN</p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961774" data-title="Способ временного окрашивания волос бороды"><p class="usluga">Камуфляж (тонирование) головы <p class="price">25 BYN </p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961774" data-title="Способ временного окрашивания волос бороды"><p class="usluga">Камуфляж (тонирование) бороды</p> <p class="price">15 BYN</p></a>
+       <a class="price-cur" href="https://b885266.yclients.com/company/825705/create-record?o=m2521140s11961779" data-title="Способ временного удаления не желательного роста волос"><p class="usluga"><strong class="red">*</strong>Восковая депиляция</p> <p class="price">20 BYN</p></a>
+      <p class="dop-price"><strong class="red">Бесплатно</strong> – любая процедура помеченная “<strong class="red">*</strong>” в комплексе с основной</p>
       </div>
       </div>
   </div>
   </div>
+</div>
+</div>
+  <div class="container">
   <div class="sertification">
     <div class="sertification-slogan"><h3 class="sertification-main">также вы можете приобрести наш подарочный сертификат</h3>
     <a href="" class="sertification-button">Приобрести</a></div>
@@ -200,7 +224,7 @@
       </div>
     </div>
     <a href="" class="sertification-button sertification-button-mobile">Приобрести</a></div>
-
+  </div>
   </div>
 </div>
 </div>
@@ -213,34 +237,39 @@
     <div class="footer-info">
 <p class="footer-text">
   г.Светлогорск,
-ул. Луначарского,6. </p>
-<p class="footer-text">
-Вход со стороны 
-Торгового Центра.
-</p>
-<p class="footer-text">
-  barbershop.dip@gmail.com
-  +375 (29) 121-25-73
-</p>
+ул. Луначарского,6.<br>
+<strong class="footer-text-min">
+  P.S. Вход со стороны 
+  Торгового Центра.
+  </strong> </p>
 
+<p class="footer-text">
+  +375 (29) 121-25-73 
+  barbershop.dip@gmail.com
+</p>
+<p class="footer-text">
+  <b> Barbershop Blog </b>
+</p>
 <div class="icon-block-1">
-  <a href="https://chat.whatsapp.com/I47IlYh019n5eAtQigxTbK" class="icon-footer"><img src="/img/Social Icons.png" alt=""></a>
-  <a href="https://www.instagram.com/barber.dip" class="icon-footer"><img src="/img/Social Icons (1).png" alt=""></a>
-  <a href="https://invite.viber.com/?g2=AQAJjBwqzpuge1EkGm5mGZNDPcdA50I0qBMmXlQA0f2RlWffiZZXTrTIdYX8licT&lang=ru" class="icon-footer"><img src="/img/Social Icons (2).png" alt=""></a>
-  <a href="https://t.me/barberdip2" class="icon-footer"><img src="/img/Social Icons (3).png" alt=""></a>
-  <a href="https://www.youtube.com/channel/UCdzmWsC5PBXHtnjzAp_zzog" class="icon-footer"><img src="/img/Social Icons (4).png" alt=""></a>
-  <a href="https://vk.com/barbershopdip" class="icon-footer"><img src="/img/Social Icons (5).png" alt=""></a>
+  <a href="https://www.instagram.com/barbershop.dip/" class="icon-footer"><img src="/img/inst.png" alt=""></a>
+  <a href="https://vk.com/barbershopdip" class="icon-footer"><img src="/img/vk.png" alt=""></a>
+  <a href="https://www.tiktok.com/@barbershop.dip" class="icon-footer"><img src="/img/tik-tok.png" alt=""></a>
+  <a href="https://www.youtube.com/channel/UCdzmWsC5PBXHtnjzAp_zzog" class="icon-footer"><img src="/img/youtobe.png" alt=""></a>
+  <a href="https://t.me/barbershopdip" class="icon-footer"><img src="/img/telegram.png" alt=""></a>
+  <a href="https://chat.whatsapp.com/I47IlYh019n5eAtQigxTbK" class="icon-footer"><img src="/img/wat.png" alt=""></a>
+  <a href="https://invite.viber.com/?g2=AQAJjBwqzpuge1EkGm5mGZNDPcdA50I0qBMmXlQA0f2RlWffiZZXTrTIdYX8licT&lang=ru" class="icon-footer"><img src="/img/viber.png" alt=""></a>
 </div>
 <p class="footer-text">
-  Personal Blog
+ <b>Admin Blog </b> 
 </p>
 <div class="icon-block-1">
-  <a href="https://chat.whatsapp.com/JJlr2evDv4EK1QgHjGOyoG" class="icon-footer"><img src="/img/Social Icons.png" alt=""></a>
-  <a href="https://www.instagram.com/barbershop.dip/" class="icon-footer"><img src="/img/Social Icons (1).png" alt=""></a>
-  <a href="https://invite.viber.com/?g2=AQAZ%2FfclRKyxJVEsMUQ0K80rKFNfxjkmAhPvBPZFQfL0f7eNUUrwP%2BI0iGNF69IS&lang=ru" class="icon-footer"><img src="/img/Social Icons (2).png" alt=""></a>
-  <a href="https://t.me/barbershopdip" class="icon-footer"><img src="/img/Social Icons (3).png" alt=""></a>
-  <a href="https://www.youtube.com/channel/UC_Op_ThNCmjnysv5wdBu-pQ" class="icon-footer"><img src="/img/Social Icons (4).png" alt=""></a>
-  <a href="https://vk.com/barberdip" class="icon-footer"><img src="/img/Social Icons (5).png" alt=""></a>
+  <a href="https://www.instagram.com/barber.dip" class="icon-footer"><img src="/img/inst.png" alt=""></a>
+  <a href="https://vk.com/barberdip" class="icon-footer"><img src="/img/vk.png" alt=""></a>
+  <a href="https://www.tiktok.com/@barber.dip" class="icon-footer"><img src="/img/tik-tok.png" alt=""></a>
+  <a href="https://www.youtube.com/channel/UC_Op_ThNCmjnysv5wdBu-pQ" class="icon-footer"><img src="/img/youtobe.png" alt=""></a>
+  <a href="https://t.me/barberdip2" class="icon-footer"><img src="/img/telegram.png" alt=""></a>
+  <a href="https://chat.whatsapp.com/I47IlYh019n5eAtQigxTbK" class="icon-footer"><img src="/img/wat.png" alt=""></a>
+  <a href="https://invite.viber.com/?g2=AQAZ%2FfclRKyxJVEsMUQ0K80rKFNfxjkmAhPvBPZFQfL0f7eNUUrwP%2BI0iGNF69IS&lang=ru" class="icon-footer"><img src="/img/viber.png" alt=""></a>
 </div>
 </div>
 

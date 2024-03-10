@@ -47,9 +47,10 @@ html {
     max-width: 1870px;
 }
 .backgraund{
+  z-index: 10;
   background: no-repeat;
-background-image:url(/img/fon.png);
-background-size: 100% 100%;
+background-image:url(/img/fode-head.png);
+background-size: 100% 101%;
 }
 @media (max-width: 800px){
     .container {
