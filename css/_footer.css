@@ -63,6 +63,8 @@
   }
   .sertification-button:hover{
     background-color: #878787;
+    border:2px solid white;
+    color:white;
   }
 .sertification-button-mobile{
     display: none;
