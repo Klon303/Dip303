@@ -123,4 +123,7 @@
         flex-direction: column;
         align-items:center;
     }
+    .uslugi{
+        font-size: 22px;
+    }
 }
