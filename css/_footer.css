@@ -62,7 +62,7 @@
     transition: 1s;
   }
   .sertification-button:hover{
-    background-color: #878787;
+    background-color: black;
     border:2px solid white;
     color:white;
   }
