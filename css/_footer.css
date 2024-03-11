@@ -68,11 +68,16 @@
 }
 @media (max-width: 1400px){
     .sertification-main{
-    font-size: 40px;
+    font-size: 48px;
     font-weight: bold;
-    width: 400px;
-}}
+    width: 600px;
+}
+.sertification-slogan {
+    padding-left: 0;
+}
+}
   @media (max-width: 1200px){
+
     .sertification-img{
         width: 90%;
         padding-bottom: 20px;

@@ -44,22 +44,6 @@
     </div>
   </div>
   </header>
-<script>let menu_button = document.querySelector('.header__burger');
-  let menu_itself = document.querySelector('.header__menu');
-  let menu_list = document.querySelector('.header__list');
-  let body = document.querySelector('body');
-  
-  menu_button.onclick = function() {
-    menu_button.classList.toggle('active');
-    menu_itself.classList.toggle('active');
-    body.classList.toggle('lock');
-  };
-  
-  menu_list.onclick = function() {
-    menu_button.classList.toggle('active');
-    menu_itself.classList.toggle('active');
-    body.classList.toggle('lock');
-  }; </script>
   <div class="name-slogan-back">
   <div class="container">
     <div id="main" class="name-slogan">
@@ -103,59 +87,13 @@
 </div>
   <div class="card">
     <div class="card-wrapper">
-      <p class="text-card"> <b> Barbershop dip </b> – Это “мини-барбершоп” с большими амбициями. Это место где тебя встретят как гостя и помогут найти индивидуальный стиль. Выполнив все услуги качественно и по доступным ценам!</p>
-      <p class="text-card">  <b>+</b> В комплексе к основным услугам сделают (укладку, патчи, массаж головы и восковую депиляцию) – бесплатно!</p>
-      <p class="text-card">  <b>P.S</b> В барбершопе всегда играет приятная музыка, работает климат-контроль, зона зарядки для ваших смартфонов и мини-бар (кофе/чай, + шоколад)</p>
+      <p class="text-card"> <b class="strong"> Barbershop dip </b> – Это “мини-барбершоп” с большими амбициями. Это место где тебя встретят как гостя и помогут найти индивидуальный стиль. Выполнив все услуги качественно и по доступным ценам!</p>
+      <p class="text-card">  <b class="strong">+</b> В комплексе к основным услугам сделают (укладку, патчи, массаж головы и восковую депиляцию) –<b class="strong"> бесплатно!</b></p>
+      <p class="text-card">  <b class="strong">P.S.</b> В барбершопе всегда играет приятная музыка, работает климат-контроль, зона зарядки для ваших смартфонов и мини-бар (кофе/чай, + шоколад)</p>
     </div>
       </div>
 </div>
 </div>
-<script>
-var leftArrow = document.querySelector('.slider__control--prev');
-var rightArrow = document.querySelector('.slider__control--next');
-var sliderList = document.querySelector('.slider__list');
-var sliderContainer = document.querySelector('.slider');
-var size = parseInt(getComputedStyle(sliderContainer).width);
-var start = 1;
-
-leftArrow.addEventListener('click', function (e) {
-    e.preventDefault();
-    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
- 
-    if (start > 1 && currentLeft % size == 0) {        
-      sliderList.style.left = currentLeft + size + 'px';
-      start--;      
-      
-    } else if (currentLeft % size == 0) {
-      sliderList.style.left = currentLeft - 4 * size + 'px';
-      start = 5;      
-    }
- })
-
-rightArrow.addEventListener('click', function (e) {
-    e.preventDefault();
-    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
-
-    if (start < 5 && currentLeft % size == 0) {
-
-        sliderList.style.left = currentLeft - size + 'px';
-        start++;
-    
-    } else if (currentLeft % size == 0) {
-      sliderList.style.left = 0 + 'px';
-      start = 1;     
-    }
-})
-
-
-window.addEventListener('resize', function() {  
-  size = parseInt(getComputedStyle(sliderContainer).width); 
-  // console.log("size: " + size);
-  // console.log("start: " + start);
-  // console.log(-size * start);
-  sliderList.style.left = -size * (start-1) + 'px';
-});
-</script>
 <h2 class="head-main price-main" >--НАШИ УСЛУГИ--</h2>
 <div class="background-price">
 <div class="container">
@@ -267,26 +205,7 @@ window.addEventListener('resize', function() {
 </div>
 </div>
 </div>
-<script>let dots = 6;
-  let sliderElem = document.querySelector(".slider");
-  let dotElems = sliderElem.querySelectorAll(".slider__dot");
-  let indicatorElem = sliderElem.querySelector(".slider__indicator");
-  
-  Array.prototype.forEach.call(dotElems, (dotElem) => {
-    dotElem.addEventListener("click", (e) => {
-      let currentPos = parseInt(sliderElem.getAttribute("data-pos"));
-      let newPos = parseInt(dotElem.getAttribute("data-pos"));
-  
-      let newDirection = newPos > currentPos ? "right" : "left";
-      let currentDirection = newPos < currentPos ? "right" : "left";
-  
-      indicatorElem.classList.remove(`slider__indicator--${currentDirection}`);
-      indicatorElem.classList.add(`slider__indicator--${newDirection}`);
-      sliderElem.setAttribute("data-pos", newPos);
-    });
-  });
-
-
+<script>
   const anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
@@ -301,7 +220,7 @@ for (let anchor of anchors) {
     })
   })
 }
-  </script>
+</script>
 <script src="/js/script.js"></script>
 </body>
 </html>
