@@ -62,7 +62,7 @@
     transition: 1s;
   }
   .sertification-button:hover{
-    background-color: yellow;
+    background-color: #878787;
   }
 .sertification-button-mobile{
     display: none;
