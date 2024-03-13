@@ -125,7 +125,7 @@ text-align: center;
 .wrapper-price{
     display: flex;
     justify-content: space-between;
-    vertical-align: center;
+    align-items: center;
 }
 
 .price_vop{
